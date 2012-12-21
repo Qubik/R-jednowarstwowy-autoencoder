@@ -3,7 +3,7 @@
 
 # Example code in package build process
 *-Ex.R
-
+`````R
 m=5
 
 macierz=matrix(0,m,m)
@@ -20,3 +20,4 @@ f<-function(x){sum((x-1/exp(macierz%*%(1/exp(macierz%*%x))))^2)}
 
 
 optim(par=rep(.5,m),f)
+`````
