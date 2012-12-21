@@ -4,7 +4,7 @@
 # Example code in package build process
 *-Ex.R
 `````javascript
-`\\m=5
+'\\m=5
 
 macierz=matrix(0,m,m)
 
