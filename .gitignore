@@ -3,3 +3,20 @@
 
 # Example code in package build process
 *-Ex.R
+
+m=5
+
+macierz=matrix(0,m,m)
+
+w_los=runif(m*(m-1)/2)
+
+macierz[upper.tri(macierz)]=w_los
+
+macierz=macierz+t(macierz)
+
+x=c(1,1,1,1,1)
+
+f<-function(x){sum((x-1/exp(macierz%*%(1/exp(macierz%*%x))))^2)}
+
+
+optim(par=rep(.5,m),f)
